@@ -17,14 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDl-W3-5mA">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zDl-yF-K9V">
                                 <rect key="frame" x="209" y="285" width="183" height="30"/>
-                                <state key="normal" title="Click to change the screen"/>
-                                <connections>
-                                    <action selector="changeScreens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNV-zB-YqC"/>
-                                    <segue destination="gyW-3y-1Pf" kind="show" identifier="toUpdatedView" id="WmO-3l-PfP"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDl-W3-5mA">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
+                                        <state key="normal" title="Click to change the screen"/>
+                                        <connections>
+                                            <action selector="changeScreens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNV-zB-YqC"/>
+                                            <segue destination="gyW-3y-1Pf" kind="show" identifier="toUpdatedView" id="WmO-3l-PfP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -62,12 +67,28 @@
                     <view key="view" contentMode="scaleToFill" id="G12-0J-ive">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="A  Bird 2" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-UV-tuk">
+                                <rect key="frame" x="150" y="28" width="284" height="177"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="SnowBoarding 2" translatesAutoresizingMaskIntoConstraints="NO" id="gYQ-Ex-9f6">
+                                <rect key="frame" x="160" y="304" width="265" height="190"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomImage" destination="gYQ-Ex-9f6" id="Fpc-rP-Zd8"/>
+                        <outlet property="topImage" destination="oVF-UV-tuk" id="FAF-XG-y2g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfl-zJ-PLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086" y="333"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="A  Bird 2" width="284" height="177"/>
+        <image name="SnowBoarding 2" width="265" height="190"/>
+    </resources>
 </document>
