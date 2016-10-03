@@ -19,7 +19,7 @@ class UpdatedViewController :  UIViewController
         //Does the parent class ersion of the method first.
     super.viewDidLoad()
         //Then Load this classes components.
-    bottomImage.image = UIImage(named: "glitchy")
+    bottomImage.image = UIImage(named: "Snowboarder")
     }
 
 
